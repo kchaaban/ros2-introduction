@@ -1,0 +1,58 @@
+=== Bus Geofence Analysis Demonstration ===
+
+1. SQL Query Structure:
+   - Complex multi-CTE query for spatial-temporal analysis
+   - Analyzes bus movements in/out of geofenced areas
+   - Tracks cumulative counts over time buckets
+   - Handles multiple service providers
+
+2. Key Parameters:
+   - geofence_id: Specific geofence to analyze
+   - starttime: Analysis start time
+   - endtime: Analysis end time
+
+3. Output Structure:
+   Columns: time_bucket, geofence_id, bus_id, service_provider_company, event_type, inbound_count, outbound_count, initial_count, net_flow, cumulative_count
+
+4. Sample Usage:
+   analyzer = BusGeofenceAnalyzer(db_config)
+   results = analyzer.analyze_geofence_activity(
+       geofence_id=1,
+       start_time='2024-01-01T06:00:00',
+       end_time='2024-01-01T18:00:00'
+   )
+
+5. ROS2 Integration Possibilities:
+   - Real-time monitoring of bus fleets
+   - Geofence violation detection
+   - Capacity planning and optimization
+   - Event-driven alerts and notifications
+   - Historical analysis and reporting
+
+=== SQL Query Components ===
+
+   position_status           - Determines if buses are inside/outside geofences
+   time_buckets              - Creates 5-minute time intervals
+   with_transitions          - Tracks status changes for each bus
+   geofence_events           - Identifies entry/exit events
+   bucket_counts             - Counts entries/exits per time bucket
+   initial_buses_detailed    - Finds buses present at start time
+   bus_status_per_bucket     - Tracks bus presence per time bucket
+   initial_count_calc        - Calculates initial bus count
+   bucket_aggregates         - Aggregates data per time bucket
+   cumulative_counts         - Calculates cumulative statistics
+
+6. SQL Query Length: 6730 characters
+   Query contains 16 SELECT statements
+   Query contains 1 WITH clauses
+
+=== Implementation Complete ===
+The bus geofence analysis module has been successfully implemented
+with the following features:
+- Complex spatial-temporal SQL query
+- Python wrapper class for database interaction
+- Comprehensive documentation
+- Unit tests for core functionality
+- Example configuration files
+
+Ready for integration with ROS2 applications!

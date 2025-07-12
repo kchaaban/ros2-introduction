@@ -86,6 +86,30 @@ You can split it horizontally or vertically by clicking right on the terminal <b
 
 ![image](https://github.com/user-attachments/assets/cf86df3c-9e73-4177-81d4-20035f5c99c7)
 
+## Step 2: Bus Geofence Analysis Integration
+
+**Advanced Feature**: This repository now includes a comprehensive bus geofence analysis module that can be integrated with ROS2 applications for transportation and logistics systems.
+
+### Features:
+- Spatial-temporal analysis of bus movements
+- Geofence entry/exit event detection
+- Real-time flow metrics and cumulative tracking
+- Multi-provider support for fleet management
+
+### Quick Start:
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run tests
+python -m pytest tests/
+
+# See documentation
+cat docs/bus_geofence_analysis.md
+```
+
+For detailed usage instructions, see [`docs/bus_geofence_analysis.md`](docs/bus_geofence_analysis.md).
+
 <footer>
 
 <!--
